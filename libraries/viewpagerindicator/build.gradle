@@ -1,0 +1,33 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    namespace 'com.viewpagerindicator'
+    compileSdk 34
+
+    defaultConfig {
+        minSdk 21
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            res.srcDirs = ['res']
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lint {
+        abortOnError false
+    }
+}
+
+dependencies {
+    api 'com.android.support:support-v4:18.0.0'
+}

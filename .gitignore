@@ -19,3 +19,6 @@ gen-external-apklibs
 out
 .DS_Store
 
+.gradle
+build
+local.properties

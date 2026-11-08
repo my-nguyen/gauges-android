@@ -1,0 +1,13 @@
+plugins {
+    id 'com.android.application' version '8.13.2' apply false
+    id 'com.android.library' version '8.13.2' apply false
+}
+
+subprojects {
+    // Legacy Maven-era artifacts pull in com.google.android:support-v4 / android jars;
+    // the support library comes from Google's repository instead.
+    configurations.configureEach {
+        exclude group: 'com.google.android', module: 'support-v4'
+        exclude group: 'com.google.android', module: 'android'
+    }
+}
